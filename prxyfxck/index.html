@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prxy Fxck - Web Proxy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        #urlInput {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        #browseButton {
+            padding: 10px 15px;
+        }
+        #outputFrame {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #ccc;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Prxy Fxck</h1>
+    <p>Enter a URL to browse:</p>
+    <input type="text" id="urlInput" placeholder="https://example.com">
+    <button id="browseButton">Browse</button>
+    <div id="errorMessage" class="error"></div>
+    <iframe id="outputFrame" src=""></iframe>
+
+    <script>
+        document.getElementById('browseButton').addEventListener('click', function() {
+            const urlInput = document.getElementById('urlInput').value;
+            const outputFrame = document.getElementById('outputFrame');
+            const errorMessage = document.getElementById('error
